@@ -53,3 +53,5 @@ a {
 	color: black;
 	font-weight: bold;
 }
+
+label { display: block; }

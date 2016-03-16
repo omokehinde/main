@@ -4,7 +4,7 @@
 <ul id = 'songs'>
 	<li><% if @songs.any? %>
 	<% @songs.each do |songs| %>
-	<a href = "/songs/#{song.id} "> <%= songs.title %> </a>
+	<a href = "/songs/<%= songs.id %> "> <%= songs.title %> </a>
 	<% end -%>
 	<% else %>
 	<p> No songs have been created yet! </p><li>
