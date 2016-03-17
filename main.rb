@@ -1,6 +1,4 @@
 require 'sinatra'
-require 'erb'
-require 'tilt/erubis'
 require "./song"
 
 get '/'do
