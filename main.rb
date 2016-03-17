@@ -1,9 +1,7 @@
 require 'sinatra'
 require "./song"
 
-get '/'do
-	erb :home
-end
+
 
 get '/about'  do
 	@title = "All About This Website"
