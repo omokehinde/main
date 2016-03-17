@@ -1,5 +1,4 @@
 require "dm-core"
-require "dm-migrations"
 require "erb"
 
 configure do
