@@ -1,14 +1,14 @@
 require 'sinatra'
 require "./song"
 require "dm-core"
-require "dm-postgres-adapter"
+require "data_mapper"
 
 configure :development do
 	DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/development.db")
 end
 
 configure :production do
-	DataMapper::setup(:default, ENV['DATABASE_URL'])
+	DataMapper::setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 end
 
 class Song
