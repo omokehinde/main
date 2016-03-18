@@ -23,7 +23,7 @@ class Song
 
 end
 
-DataMapper.finalize.auto_upgrade!
+DataMapper.finalize
 
 get '/login' do
 	erb :login

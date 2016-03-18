@@ -1,5 +1,5 @@
 require 'sinatra'
-require "./song"
+#require "./song"
 
 configure :development do
 	DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
