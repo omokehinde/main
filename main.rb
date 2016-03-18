@@ -1,7 +1,7 @@
 require 'sinatra'
 require "./song"
 require "dm-core"
-require "data_mapper"
+
 
 configure :development do
 	DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/development.db")
