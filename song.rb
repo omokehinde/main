@@ -7,9 +7,6 @@ configure do
 	set :password, 'sinatra'	
 end
 
-configure :development do
-	DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
-end
 
 class Song
 	include DataMapper::Resource
@@ -27,10 +24,6 @@ class Song
 end
 
 DataMapper.finalize.auto_upgrade!
-
-get '/'do
-	erb :home
-end
 
 get '/login' do
 	erb :login
